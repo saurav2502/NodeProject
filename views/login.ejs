@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Login Page</title>
-    <script>
-        function submit() {
-            alert("login successed!");
-            console.log("asdfghjksdfgh");
-        }
-        function reset() {
-            res.send("data clear please choose again")
-        }
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            $('#user').val("new User");
+        });
+
+
     </script>
+
 </head>
 <body>
    <form action="/loginSuccess" method="post">
-       User Name <input type="text" placeholder="enter UserName" name="username" style="color: red;">
-       Password <input type="text" placeholder="enter password" name="passwrd" style="color: aqua;">
+       User Name <input type="text" placeholder="enter UserName" id="user" name="username" style="color: red;">
+       Password <input type="text" placeholder="enter password" id="pass" name="passwrd" style="color: aqua;">
        <input type="submit" value="Submit" name="sumit">
-       <input type="button" value="Reset" name="reset">
+       <input type="reset" name="Reset" >
    </form>
 
 </body>
